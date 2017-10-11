@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -56,6 +57,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     public String session_id;
     public String jsonResponse;
     public String resultText;
+    public JSONObject userobj;
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -360,7 +362,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 //read the session information
                 session_name=jsonObject.getString("session_name");
                 session_id=jsonObject.getString("sessid");
-
+                userobj = jsonObject.getJSONObject("user");
 
                 resultText = "Login ID: " + session_id + "this" + session_name;
                 //Toast.makeText(LoginActivity.this, session_id + "this" + session_name, Toast.LENGTH_LONG).show();
@@ -408,13 +410,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 //pass the session_id and session_name to ListActivity
                 intent.putExtra("SESSION_ID", session_id);
                 intent.putExtra("SESSION_NAME", session_name);
+                intent.putExtra("JSON_USER_RESPONSE", userobj.toString());
                 //start the ListActivity
                 Toast.makeText(LoginActivity.this, session_id + "this" + session_name, Toast.LENGTH_LONG).show();
                 startActivity(intent);
 
                 finish();
             } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password) + " - " + success.toString() + " - SESSION_ID: " + session_id + "Result: " + resultText);
+                mPasswordView.setError(getString(R.string.error_incorrect_password) + " - " + success.toString());
+                //mPasswordView.setError(getString(R.string.error_incorrect_password) + " - " + success.toString() + " - SESSION_ID: " + session_id + "Result: " + resultText);
                 mPasswordView.requestFocus();
             }
         }
