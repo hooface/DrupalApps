@@ -403,7 +403,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             //edtResponse.append("Response: " + jsonResponse);
 
             if (success) {
-                Toast.makeText(LoginActivity.this, session_id + "this" + session_name, Toast.LENGTH_LONG).show();
+                //Toast.makeText(LoginActivity.this, session_id + "this" + session_name, Toast.LENGTH_LONG).show();
                 mPasswordView.setError("Login success");
 
                 Intent intent = new Intent(LoginActivity.this, ListActivity.class);
@@ -411,8 +411,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 intent.putExtra("SESSION_ID", session_id);
                 intent.putExtra("SESSION_NAME", session_name);
                 intent.putExtra("JSON_USER_RESPONSE", userobj.toString());
+                intent.putExtra("JSON_RESPONSE", jsonResponse.toString());
                 //start the ListActivity
-                Toast.makeText(LoginActivity.this, session_id + "this" + session_name, Toast.LENGTH_LONG).show();
+                //Toast.makeText(LoginActivity.this, session_id + "this" + session_name, Toast.LENGTH_LONG).show();
                 startActivity(intent);
 
                 finish();

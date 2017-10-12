@@ -38,27 +38,51 @@ public class UserProfile {
 
     public UserProfile(String data) throws JSONException {
         this.data = new JSONObject(data);
-        this.userData = new JSONObject((Map) this.data.getJSONObject("user"));
-        this.userPicture = new JSONObject((Map) this.userData.getJSONObject("picture"));
+        this.userData = new JSONObject(String.valueOf(this.data.getJSONObject("user")));
+        this.userPicture = new JSONObject(String.valueOf(this.userData.getJSONObject("picture")));
 
-        this.sessid = this.data.getString("sessid");
-        this.session_name = this.data.getString("session_name");
-        this.token = this.data.getString("token");
+        //this.sessid = this.data.getString("sessid");
+        //this.session_name = this.data.getString("session_name");
+        //this.token = this.data.getString("token");
 
         this.uid = this.userData.getInt("uid");
         this.name = this.userData.getString("name");
         this.mail = this.userData.getString("mail");
-        this.theme = this.userData.getString("theme");
-        this.signature = this.userData.getString("signature");
-        this.created = this.userData.getString("created");
-        this.access = this.userData.getString("access");
-        this.login = this.userData.getString("login");
-        this.status = this.userData.getInt("status");
-        this.timezone = this.userData.getString("timezone");
+        //this.theme = this.userData.getString("theme");
+        //this.signature = this.userData.getString("signature");
+        //this.created = this.userData.getString("created");
+        //this.access = this.userData.getString("access");
+        //this.login = this.userData.getString("login");
+        //this.status = this.userData.getInt("status");
+        //this.timezone = this.userData.getString("timezone");
 
         this.pictureUrl = this.userPicture.getString("url");
 
         //this.fieldFirstName = this.userData.getJSONObject('field_first_name');
+    }
+
+    public JSONObject getData() {
+        return data;
+    }
+
+    public void setData(JSONObject data) {
+        this.data = data;
+    }
+
+    public JSONObject getUserData() {
+        return userData;
+    }
+
+    public void setUserData(JSONObject userData) {
+        this.userData = userData;
+    }
+
+    public JSONObject getUserPicture() {
+        return userPicture;
+    }
+
+    public void setUserPicture(JSONObject userPicture) {
+        this.userPicture = userPicture;
     }
 
     public String getSessid() {
