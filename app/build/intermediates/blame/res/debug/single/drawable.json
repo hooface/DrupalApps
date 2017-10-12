@@ -44,6 +44,10 @@
         "source": "C:\\Users\\ashwin.d.parmar\\.android\\build-cache\\4ad3232b2923e66569d4b4202d2696b984746631\\output\\res\\drawable\\notification_bg.xml"
     },
     {
+        "merged": "C:\\Users\\ashwin.d.parmar\\AndroidStudioProjects\\DrupalApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_apple.png",
+        "source": "C:\\Users\\ashwin.d.parmar\\AndroidStudioProjects\\DrupalApp\\app\\src\\main\\res\\drawable\\ic_apple.png"
+    },
+    {
         "merged": "C:\\Users\\ashwin.d.parmar\\AndroidStudioProjects\\DrupalApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
         "source": "C:\\Users\\ashwin.d.parmar\\.android\\build-cache\\1fb37eb0f2d26b453dd173eed8441826069a124f\\output\\res\\drawable\\design_fab_background.xml"
     },
@@ -106,6 +110,10 @@
     {
         "merged": "C:\\Users\\ashwin.d.parmar\\AndroidStudioProjects\\DrupalApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
         "source": "C:\\Users\\ashwin.d.parmar\\.android\\build-cache\\4ad3232b2923e66569d4b4202d2696b984746631\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\ashwin.d.parmar\\AndroidStudioProjects\\DrupalApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
+        "source": "C:\\Users\\ashwin.d.parmar\\AndroidStudioProjects\\DrupalApp\\app\\src\\main\\res\\drawable\\background.xml"
     },
     {
         "merged": "C:\\Users\\ashwin.d.parmar\\AndroidStudioProjects\\DrupalApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
